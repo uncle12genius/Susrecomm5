@@ -45,11 +45,11 @@ const Hero = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Function to scroll to the next section
-  const scrollToNextSection = () => {
-    const nextSection = document.getElementById("next-section");
-    if (nextSection) {
-      nextSection.scrollIntoView({ behavior: "smooth" });
+  // Function to scroll to the About section
+  const scrollToAboutSection = () => {
+    const aboutSection = document.getElementById("About");
+    if (aboutSection) {
+      aboutSection.scrollIntoView({ behavior: "smooth" });
     }
   };
 
@@ -82,15 +82,13 @@ const Hero = () => {
             {slides[currentIndex].subtitle}
           </p>
           <button
-           onClick={() => navigate("./pages/About")}
+            onClick={scrollToAboutSection}
             className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition duration-300 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-offset-2 animate-fade-in-up delay-200"
           >
             {slides[currentIndex].buttonText}
           </button>
         </div>
       </div>
-
-      
     </>
   );
 };
