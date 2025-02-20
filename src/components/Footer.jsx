@@ -9,7 +9,7 @@ const Footer = () => {
         <img 
           src="/hero.png" 
           alt="Company Logo" 
-          className="w-16 h-auto object-contain"
+          className="w-11 h-9 object-contain"
         />
 
         {/* Social Media Links in the Center */}
@@ -43,9 +43,16 @@ const Footer = () => {
         </div>
 
         {/* Email on the far right */}
-        <a href="mailto:info@susrecomm.com" className="text-blue-600 hover:underline mt-2 md:mt-0">
-          info@susrecomm.com
-        </a>
+        <div className="flex flex-col md:flex-row items-center md:space-x-4 space-y-0">
+        <a href="tel:+12345677890" className="text-blue-600 hover:underline mt-2 md:mt-0">
+        <img src="phone.png" alt="Phone Icon" className="inline-block w-6 h-6" />
+          </a>
+           <a href="mailto:info@susrecomm.com" className="text-blue-600 hover:underline mt-2 md:mt-0">
+          <img src="message.png" alt="Email Icon" className="inline-block w-6 h-6" />
+            </a>
+        </div>
+
+         
       </div>
     </footer>
   );
